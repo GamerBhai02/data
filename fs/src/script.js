@@ -260,20 +260,20 @@ const videolink = window.location.href;
 const streamlink = videolink.replace("/watch/", "/dl/");
 
 function vlc_player() {
-    const openstreamlink = streamlink;
+    const openstreamlink = streamlink.replace(/^https?:\/\//, '');
     const openVlc = `vlc://${openstreamlink}`;
     window.location.href = openVlc;
 }
 
 function mx_player() {
-    const openstreamlink = streamlink;
-    const openMx = `intent:${openstreamlink}#Intent;package=com.mxtech.videoplayer.ad;end`;
+    const openstreamlink = streamlink.replace(/^https?:\/\//, '');
+    const openMx = `intent://${openstreamlink}#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;end`;
     window.location.href = openMx;
 }
 
 function n_player() {
-    const openstreamlink = streamlink;
-    const openNplayer = `nplayer-${openstreamlink}`;
+    const openstreamlink = streamlink.replace(/^https?:\/\//, '');
+    const openNplayer = `intent://${openstreamlink}#Intent;package=com.newin.nplayer.pro;action=android.intent.action.VIEW;end`;
     window.location.href = openNplayer;
 }
 
