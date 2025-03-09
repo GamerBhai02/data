@@ -47,7 +47,7 @@ let footer = document.querySelector('footer')
 let timer = 0
 
 if (document.getElementById("heading").classList.contains("title")) {
-    document.querySelector(".title").textContent = 'ALL MOVIES LINK'
+    document.querySelector(".title").textContent = 'FILE STREAM'
 }
 
 // adding under in home btn at first 
@@ -316,4 +316,3 @@ function copyStreamLink() {
       alert('Failed to copy link. Please try manually.');
     });
 }
-
